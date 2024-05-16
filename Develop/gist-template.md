@@ -152,7 +152,25 @@ Note: Inside a bracket expression, most special characters lose their special me
 
 ### Greedy and Lazy Match
 
+In regular expressions, "greedy" and "lazy" are terms used to describe the matching behavior of quantifiers.
 
+* Greedy Quantifiers
+
+By default, quantifiers in regular expressions are greedy. This means they will match as much as possible. For example, given the string <em>hello</em><em>world</em> and the pattern <em>.*</em>, the match will be the entire string <em>hello</em><em>world</em>. This is because the .* pattern is greedy and consumes as much as it can, including the </em><em> in the middle.
+
+* Lazy Quantifiers
+
+Lazy quantifiers, also known as non-greedy or reluctant quantifiers, will match as little as possible. You can make a quantifier lazy by following it with a question mark ?. For example, given the same string <em>hello</em><em>world</em> and the pattern <em>.*?</em>, there will be two matches: <em>hello</em> and <em>world</em>. This is because the .*? pattern is lazy and stops consuming as soon as it can form a valid match.
+
+Here's how you can make the common quantifiers lazy:
+
+* `*?` - Zero or more, lazy. This will match as few characters as possible to form a valid match.
+
+* `+?` - One or more, lazy. This will match as few characters as possible, but there must be at least one.
+
+* `??` - Zero or one, lazy. This will prefer to match zero characters if that forms a valid match.
+
+* `{n,m}?` - Between n and m, lazy. This will match as few characters as possible to form a valid match, but there must be at least n.
 
 ### Boundaries
 
