@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# Regex Tutorial
 
 Introductory paragraph (replace this with your text)
 
@@ -233,4 +233,4 @@ These assertions are called "look-ahead" and "look-behind" because they look ahe
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+ [ZeDevGit](https://github.com/ZeDevGit)
