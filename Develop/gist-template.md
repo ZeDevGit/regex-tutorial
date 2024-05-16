@@ -47,7 +47,14 @@ Quantifiers in regular expressions define how many instances of a character, gro
 
 ### OR Operator
 
+The OR operator in regular expressions is represented by the pipe symbol |. It is used to specify more than one pattern to match within the same position of a string.
 
+Here's how it works:
+
+* a|b - This pattern matches either 'a' or 'b'. It will first try to match 'a'. If 'a' is not found, it will then try to match 'b'.
+The OR operator can be used with characters, groups, and character classes. For example:
+
+* (abc|def) - This pattern matches either 'abc' or 'def'.
 
 ### Character Classes
 
