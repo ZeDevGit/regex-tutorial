@@ -88,7 +88,19 @@ There are also some special character classes:
 
 ### Flags
 
+Flags in regular expressions are used to change the search pattern. Here are the most common flags:
 
+* `g` - Global search. Without this flag, the search stops after the first match. With this flag, the search continues to find all matches.
+
+* `i` - Case-insensitive search. Without this flag, the search is case-sensitive. With this flag, the search ignores case.
+
+* `m` - Multiline search. Without this flag, the ^ and $ metacharacters match the start and end of the entire string. With this flag, they match the start and end of each line.
+
+* `s` - Allows . to match newline characters. Without this flag, the . metacharacter matches any character except newline characters. With this flag, it matches any character including newline characters.
+
+* `u` - Unicode mode. It makes the regex engine treat the pattern as a sequence of Unicode code points. This is necessary for using Unicode property escapes \p{...} and named captures (?<name>...).
+
+* `y` - Sticky mode. It makes the regex engine start the search not from the start of the string, but from the position indicated in lastIndex property of the regex object.
 
 ### Grouping and Capturing
 
