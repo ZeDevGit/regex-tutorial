@@ -188,7 +188,26 @@ These boundary types are often used to ensure that a pattern matches a whole wor
 
 ### Back-references
 
+Boundaries in regular expressions are positions between characters, rather than actual characters. Here are the most common boundary types:
 
+* `^` - Matches the start of the string, or the start of a line if the multiline flag m is set.
+
+* `$` - Matches the end of the string, or the end of a line if the multiline flag m is set.
+
+* `\b` - Matches a word boundary. This is the position where a word character (\w) is followed or preceded by a non-word character (\W), or at the start or end of the string if the first or last character is a word character.
+
+* `\B` - Matches a non-word boundary. This is the position where two word characters or two non-word characters are adjacent, or at the start or end of the string if the first or last character is a non-word character.
+
+These boundary types are often used to ensure that a pattern matches a whole word and not a part of a word. For example, the pattern \bword\b matches 'word' in 'word is a word', but not 'word' in 'password'.
+
+Back-references in regular expressions are a way to refer back to capture groups that have already been matched. They allow you to reuse part of the regex match within the same regex.
+
+Here's how they work:
+
+* \1, \2, \3, etc. - These patterns refer back to the first, second, third, etc. capture group in the regex. For example, in the regex (a)b\1, the \1 refers back to the first capture group (a). This regex would match 'aba', but not 'abb', because the \1 has to match the same text that was matched by (a).
+Back-references are useful for finding repeated patterns in a string. For example, the regex (\w+)\s+\1 matches repeated words, like 'the the' or 'to to'. The (\w+) captures a word, the \s+ matches one or more spaces, and the \1 matches the same word again.
+
+* Note: Back-references in JavaScript are written with a $ instead of a \ in the replacement string of the replace method. For example, 'abc'.replace(/(a)(b)(c)/, '$2$3$1') would return 'bca'.
 
 ### Look-ahead and Look-behind
 
