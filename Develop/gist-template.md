@@ -174,7 +174,17 @@ Here's how you can make the common quantifiers lazy:
 
 ### Boundaries
 
+Boundaries in regular expressions are positions between characters, rather than actual characters. Here are the most common boundary types:
 
+* `^` - Matches the start of the string, or the start of a line if the multiline flag m is set.
+
+* `$` - Matches the end of the string, or the end of a line if the multiline flag m is set.
+
+* `\b` - Matches a word boundary. This is the position where a word character (\w) is followed or preceded by a non-word character (\W), or at the start or end of the string if the first or last character is a word character.
+
+* `\B` - Matches a non-word boundary. This is the position where two word characters or two non-word characters are adjacent, or at the start or end of the string if the first or last character is a non-word character.
+
+These boundary types are often used to ensure that a pattern matches a whole word and not a part of a word. For example, the pattern \bword\b matches 'word' in 'word is a word', but not 'word' in 'password'.
 
 ### Back-references
 
