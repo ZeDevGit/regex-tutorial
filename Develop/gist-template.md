@@ -4,7 +4,7 @@ Introductory paragraph (replace this with your text)
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This tutorial is devoted to teaching the various aspects of Regex and how it can be used to create patterns that help match, locate and manage text.
 
 ## Table of Contents
 
