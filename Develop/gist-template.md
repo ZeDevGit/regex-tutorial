@@ -104,7 +104,29 @@ Flags in regular expressions are used to change the search pattern. Here are the
 
 ### Grouping and Capturing
 
+Grouping and capturing are powerful features in regular expressions that allow you to not only match complex patterns but also extract and use parts of the string that match the pattern.
 
+Here's how they work:
+
+* Grouping
+
+Grouping is done using parentheses (). The part of the pattern enclosed in parentheses is treated as a single unit by the regex engine. This is useful when you want to apply a quantifier to a group of characters, or when you want to group alternatives.
+
+For example, (abc)+ matches one or more occurrences of 'abc'. Without the parentheses, abc+ would match 'ab' followed by one or more 'c' characters.
+
+* Capturing
+
+When you use parentheses for grouping, you're also creating a "capture group". The regex engine will "capture" the part of the string that matches the pattern inside the parentheses, and you can use this captured text later.
+
+Capture groups are numbered by counting their opening parentheses from the left to the right. The first capture group is 1, the second is 2, and so on. You can refer to these groups in three ways:
+
+In the pattern itself, using a backreference (\1, \2, etc.). This matches the same text that was matched by the capture group. For example, (abc)\1 matches 'abcabc'.
+
+In the replacement part of a replace function, using a dollar sign ($1, $2, etc.). This inserts the text that was matched by the capture group.
+
+In the result of the match or exec function, which returns an array where each capture group has its own element.
+
+There's also a special kind of parentheses (?:...) that creates a non-capturing group. This is useful when you want to group parts of the pattern, but you're not interested in reusing the matched text. Non-capturing groups are not numbered, and you can't refer to them using backreferences or in the replacement string.
 
 ### Bracket Expressions
 
