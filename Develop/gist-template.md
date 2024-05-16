@@ -58,7 +58,33 @@ The OR operator can be used with characters, groups, and character classes. For 
 
 ### Character Classes
 
+Character classes in regular expressions allow you to match any symbol from a defined set of characters. Here are the most common character classes:
 
+* `[abc]` - This pattern matches any single character that is either 'a', 'b', or 'c'. It's equivalent to a|b|c.
+
+* `[a-z]` - This pattern matches any single lowercase letter. The hyphen - is used to specify a range of characters.
+
+* `[A-Z]` - This pattern matches any single uppercase letter.
+
+* `[0-9]` - This pattern matches any single digit.
+
+* `[a-zA-Z]` - This pattern matches any single letter, regardless of case.
+
+* `[^abc]` - This pattern matches any single character that is not 'a', 'b', or 'c'. The caret ^ at the start of the character class negates the set.
+
+There are also some special character classes:
+
+* `\d` - This is equivalent to [0-9], it matches any single digit.
+
+* `\D` - This is equivalent to [^0-9], it matches any single character that is not a digit.
+
+* `\w` - This matches any word character, equivalent to [a-zA-Z0-9_].
+
+* `\W` - This matches any non-word character, equivalent to [^a-zA-Z0-9_].
+
+* `\s` - This matches any whitespace character (spaces, tabs, line breaks).
+
+* `\S` - This matches any non-whitespace character.
 
 ### Flags
 
