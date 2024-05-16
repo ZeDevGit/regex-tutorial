@@ -1,6 +1,6 @@
 # Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+A tutorial for Regex components
 
 ## Summary
 
