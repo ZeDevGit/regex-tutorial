@@ -130,7 +130,25 @@ There's also a special kind of parentheses (?:...) that creates a non-capturing 
 
 ### Bracket Expressions
 
+Bracket expressions, also known as character classes, are a feature of regular expressions that allow you to match any one character from a set of characters.
 
+Here's how they work:
+
+* `[abc]` - This pattern matches any single character that is either 'a', 'b', or 'c'. It's equivalent to a|b|c.
+
+* `[a-z]` - This pattern matches any single lowercase letter. The hyphen - is used to specify a range of characters.
+
+* `[A-Z]` - This pattern matches any single uppercase letter.
+
+* `[0-9]` - This pattern matches any single digit.
+
+* `[a-zA-Z]` - This pattern matches any single letter, regardless of case.
+
+* `[^abc]` - This pattern matches any single character that is not 'a', 'b', or 'c'. The caret ^ at the start of the character class negates the set.
+
+Bracket expressions only match a single character. To match multiple characters from a set, you would combine a bracket expression with a quantifier. For example, [a-z]+ matches one or more lowercase letters.
+
+Note: Inside a bracket expression, most special characters lose their special meaning and represent themselves. For example, [abc$] matches 'a', 'b', 'c', or '$'. The exceptions are the backslash \, the caret ^ (only at the start), the hyphen - (except at the start or end), and the closing bracket ] (except at the start).
 
 ### Greedy and Lazy Match
 
