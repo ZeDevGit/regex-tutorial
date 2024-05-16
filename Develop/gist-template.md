@@ -24,6 +24,11 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 
+Anchors are a unique component in Regex in that they work a bit differently with how they deal with strings. Anchors provide a method to limit how regex matches a string by telling the regex engine where matches can being or end. They can be used to ensure that a regex matches a string at a specific place: either at the beginning or end of a string, at the end of a line, or on a word or non-word boundary.
+
+* `^` Used to find matches at the beginning of a string, or at the beginning of a line if the multiline flag is enabled.
+* `$` Used to find matches at the end of a string, or end of a line if the multiline flag is enabled. 
+
 ### Quantifiers
 
 ### OR Operator
