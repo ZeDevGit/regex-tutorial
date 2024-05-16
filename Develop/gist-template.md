@@ -211,7 +211,25 @@ Back-references are useful for finding repeated patterns in a string. For exampl
 
 ### Look-ahead and Look-behind
 
+Look-ahead and look-behind are types of assertions in regular expressions that allow you to match a pattern only if it's followed or preceded by another pattern, without including that other pattern in the match.
 
+* Look-ahead
+
+Look-ahead is written as (?=...) for positive look-ahead and (?!...) for negative look-ahead.
+
+Positive look-ahead (?=...) matches if the pattern inside the parentheses is ahead. For example, \d(?=px) matches a digit only if it's followed by 'px', but 'px' is not part of the match.
+
+Negative look-ahead (?!...) matches if the pattern inside the parentheses is not ahead. For example, \d(?!px) matches a digit only if it's not followed by 'px'.
+
+* Look-behind
+
+Look-behind is written as (?<=...) for positive look-behind and (?<!...) for negative look-behind. Note that not all regex engines support look-behind.
+
+Positive look-behind (?<=...) matches if the pattern inside the parentheses is behind. For example, (?<=px)\d matches a digit only if it's preceded by 'px', but 'px' is not part of the match.
+
+Negative look-behind (?<!...) matches if the pattern inside the parentheses is not behind. For example, (?<!px)\d matches a digit only if it's not preceded by 'px'.
+
+These assertions are called "look-ahead" and "look-behind" because they look ahead or look behind the current position in the string to check if the pattern matches, but they don't consume any characters or move the position. This is why the 'px' in the examples above is not part of the match.
 
 ## Author
 
