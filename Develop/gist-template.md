@@ -31,23 +31,55 @@ Anchors are a unique component in Regex in that they work a bit differently with
 
 ### Quantifiers
 
+Quantifiers in regular expressions define how many instances of a character, group, or character class must be present in the input for a match to be found. Here are the most common quantifiers:
+
+* `*` - The asterisk indicates zero or more of the preceding element. For example, a* matches any number of 'a' characters, including none.
+
+* `+` - The plus sign indicates one or more of the preceding element. For example, a+ matches one or more 'a' characters.
+
+* `?` - The question mark indicates zero or one of the preceding element. It makes the preceding element optional. For example, a? matches zero or one 'a' character.
+
+* `{n}` - Curly brackets with a number inside specify exactly 'n' occurrences of the preceding element. For example, a{3} matches exactly three 'a' characters.
+
+* `{n,}` - Curly brackets with a number followed by a comma specify 'n' or more occurrences of the preceding element. For example, a{2,} matches two or more 'a' characters.
+
+* `{n,m}` - Curly brackets with two numbers separated by a comma specify between 'n' and 'm' occurrences of the preceding element. For example, a{2,3} matches either two or three 'a' characters.
+
 ### OR Operator
+
+
 
 ### Character Classes
 
+
+
 ### Flags
+
+
 
 ### Grouping and Capturing
 
+
+
 ### Bracket Expressions
+
+
 
 ### Greedy and Lazy Match
 
+
+
 ### Boundaries
+
+
 
 ### Back-references
 
+
+
 ### Look-ahead and Look-behind
+
+
 
 ## Author
 
